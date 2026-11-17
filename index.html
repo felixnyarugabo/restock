@@ -1,25 +1,112 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <div class="main" id="main">
-    <div class="container" id="container">
 
-        <input type="number" id="input" placeholder="Product ID">
-        <input type="number" id="quantity" placeholder="Quantity">
+    <main class="main">
+       
+<div class="system-header">
+    <h1 id="systemName">Inventory Management System</h1>
 
-        <button id="display">Sell Product</button>
+    <div class="rename-system">
+        <input
+            type="text"
+            id="systemNameInput"
+            placeholder="Enter your system name"
+        >
 
-        <div id="restock"></div>
-
-        <div id="inventoryValue"></div>
-
+        <button id="renameBtn">Rename System</button>
     </div>
+
+    <p id="renameMessage"></p>
 </div>
-    <script src="/main.js"></script>
+
+
+        <section class="summary">
+            <div class="card">
+                <h3>Total Products</h3>
+                <p id="totalProducts">0</p>
+            </div>
+
+<section class="controls">
+    <h2>Add New Product</h2>
+
+    <input type="text" id="newProductName" placeholder="Product name">
+
+    <input type="number" id="newProductPrice" placeholder="Product price">
+
+    <input type="number" id="newProductStock" placeholder="Starting stock">
+
+    <button id="addProductBtn">Add Product</button>
+
+    <p id="addProductMessage"></p>
+</section>
+
+            <div class="card">
+                <h3>Inventory Value</h3>
+                <p id="inventoryValue">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Low Stock Items</h3>
+                <p id="lowStockCount">0</p>
+            </div>
+        </section>
+
+        <section class="controls">
+            <h2>Find a Product</h2>
+            <input type="text" id="searchInput" placeholder="Search product name">
+            <div id="searchResult"></div>
+        </section>
+
+        <section class="controls">
+            <h2>Sell or Restock</h2>
+
+            <input type="number" id="productId" placeholder="Product ID">
+            <input type="number" id="quantity" placeholder="Quantity">
+
+            <div class="buttons">
+                <button id="sellBtn">Sell Product</button>
+                <button id="restockBtn">Restock Product</button>
+            </div>
+
+            <p id="message"></p>
+        </section>
+
+        <section class="controls">
+            <h2>Product Inventory</h2>
+            <div id="productList"></div>
+        </section>
+
+        <section class="controls">
+            <h2>Low Stock Alerts</h2>
+            <div id="lowStockList"></div>
+        </section>
+
+
+
+<section class="controls">
+    <h2>Delete Product</h2>
+
+    <input
+        type="number"
+        id="deleteProductId"
+        placeholder="Enter product ID"
+    >
+
+    <button id="deleteProductBtn">Delete Product</button>
+
+    <p id="deleteMessage"></p>
+</section>
+
+    </main>
+
+    <script src="main.js"></script>
 </body>
 </html>

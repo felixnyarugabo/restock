@@ -1,0 +1,136 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    padding: 25px;
+}
+
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1e293b;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #334155;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card, .controls {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #00000010;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#restockBtn {
+    background: #15803d;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.low {
+    color: #dc2626;
+}
+
+.success {
+    color: #15803d;
+}
+
+.error {
+    color: #dc2626;
+}
+
+@media (max-width: 650px) {
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .product {
+        flex-direction: column;
+    }
+}
+
+.system-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.rename-system {
+    display: flex;
+    gap: 10px;
+    max-width: 600px;
+    margin: 15px auto;
+}
+
+.rename-system input {
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .rename-system {
+        flex-direction: column;
+    }
+}
